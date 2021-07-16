@@ -1,38 +1,84 @@
-*{
-  margin: 0px;
-  padding: 0px;
-  background-color: #74EBD5;
-  background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
-  font-family: 'Montserrat', sans-serif;
+* {
+  box-sizing: border-box;
 }
-/*.gallery_1{
-  border: 3px solid #74EBD5;
-  border-radius: 15px;
+body {
+  background:linear-gradient(50deg,#f2eaea, #abbaea);
+  padding: 6px;
+  font-size:1.4rem;
+ }
+svg text{
+  font-size: 6rem;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke:red;
+  letter-spacing: 2px;
+  animation: effect 2s infinite alternate;
 }
-*/
-.gallery_1 img{
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: -2px -3px 5px;
+.main {
+  max-width: 1000px; 
+  margin: auto;
 }
-.gallery{
+.row {
+  margin: 10px -16px;
+}
+.row,
+.row > .column {
+  padding: 8px;
+}
+.column {
   float: left;
-  width:25%;
-transform:scale(.9);
-  transition:.5s;
+  width: 33.33%;
+  display: none; 
+} 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.gallery:hover{
- transform:scale(1);
+.content {
+  background-color: white;
+  padding: 7px; 
+  border-radius:7px;
 }
-@media only screen and (max-width:700px){
-  .gallery{
-    width:50%;
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  margin: 16px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  border-radius:7px;
+}
+
+.btn:hover {
+  background:linear-gradient(50deg, #abbaea,#f2eaea);
+  cursor:pointer;
+}
+
+.btn.active {
+  background:linear-gradient(50deg,#f2eaea, #abbaea);
+  color:black;
+  outline: 2px solid ;
+}
+@media (max-width:576px){
+   .column{
+   width:100%;
+   }
+}
+@keyframes effect{
+  0%{
+    stroke-dasharray:0 70%;
+  }
+  100%{
+    stroke-dasharray:50% 0;
+    stroke-dashoffset:10%;
   }
 }
- @media only screen and (max-width:500px){
-   .gallery{
-     width:100%;
-margin:6px;
-   }
- }
+
+
+
+

@@ -6,49 +6,137 @@
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet"href="gallery.css">   
   </head>
-  <body>
-   <div align="center"style="font-size:6rem;color:#0c0f2d;">GALLERY</div>
-  <!-- for adding one image --> 
-   <div class="gallery">
-      <div class="gallery_1">
-       <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
-  <!-- first image box end -->
+  <div class="main">
+<h1 align="center"><svg width="100%"  height="20%"><text x="4%" y="76%">Gallery</text></svg></h1>
+<div id="myBtnContainer" align="center">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')">Site</button>
+  <button class="btn" onclick="filterSelection('cars')">Office</button>
+  <button class="btn" onclick="filterSelection('people')">Webinar</button>
+</div>
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+    <a target="_blank"href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <a target="_blank" href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+ <div class="column nature">
+    <div class="content">
+    <a target="_blank" href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div> 
+  <div class="column cars">
+    <div class="content">
+    <a target="_blank"href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg"alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-   <div class="gallery">
-      <div class="gallery_1">
-       <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+<div class="column cars">
+    <div class="content">
+    <a target="_blank"href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg"alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <a target="_blank"href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg"alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <a target="_blank" href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-    <div class="gallery">
-      <div class="gallery_1">
-        <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" width:200px;height:200px;/>
-      </div>
+  </div>
+   <div class="column people">
+    <div class="content">
+    <a target="_blank"href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg"alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
     </div>
-  </body>
-</html>
+  </div>
+   <div class="column people">
+    <div class="content">
+    <a target="_blank" href="https://www.ihaconsulting.in/images/gallery/1.jpg">
+      <img src="https://www.ihaconsulting.in/images/gallery/1.jpg" alt="img" style="width:100%">
+      </a>
+      <h4 align="center">Date:23/12/2012</h4>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2
+
+[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", 
+
+"");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+  </html>
